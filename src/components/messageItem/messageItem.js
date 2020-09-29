@@ -21,7 +21,8 @@ export default ({data, user}) => {
         className='message-line' 
         style={{justifyContent: user.id === data.author ? 'flex-end' : 'flex-start'}}
         >
-            <div className='message-item'>
+            <div className='message-item'
+            style={{backgroundColor: user.id === data.author ? '#dcf8c6': '#ffffff'}}>
                 <div className="message-text">{data.body}</div>
             <div className='message-date'>{time}</div>
             </div>
