@@ -11,15 +11,15 @@ import MicIcon from '@material-ui/icons/Mic';
 import messageItem from './../messageItem/messageItem';
 
 
-export default () =>{
+export default ({user}) =>{
     const [emojiOpen, setEmojiOpen] = useState(false);
     const [text, setText]= useState('');
     const [listening, setListening] = useState(false);
     const [list, setList] = useState([
-        {body: 'bobiodbeiode'},
-        {body: 'bobiodbeiode'},
-        {body: 'bobiodbeiode'},
-        {body: 'bobiodbeiode'}]);
+        {author:1, body: 'bobiodbeiode'},
+        {author:2, body: 'bobiodbeiode'},
+        {author:2, body: 'bobiodbeiode'},
+        {author:1, body: 'bobiodbeiode'}]);
 
     let recognition = null;
     let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -68,7 +68,8 @@ export default () =>{
             {list.map((item, key)=>(
                 <MessageItem
                 key={key}
-                data={item}/>
+                data={item}
+                user={user}/>
             ))}
         </div>
         <div className="chat-box--emojiarea" style={{height: emojiOpen ? '200px' : '0px'}}>
