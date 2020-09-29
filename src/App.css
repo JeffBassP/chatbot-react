@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  min-width: 80%;
+}
+
+.chat-content{
+  display: center;
+  height: 100vh;
+  width: 75vh;
+  
+}
+
+.celphone-cover{
+  border: 1px solid gray;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px black;
+}
+.cellphone-screen{
+  border: 1px solid black;
+  display: flex;
+  height: 87vh;
+  width: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+.cellphone-button{
+  width: 40px;
+    height: 40px;
+    border: 3px solid rgb(121, 106, 20);
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
